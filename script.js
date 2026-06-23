@@ -3,43 +3,43 @@ const music = document.getElementById("bgMusic");
 
 const screens = [
 {
-title:"MATCH FOUND",
-text:"Система обнаружила нового игрока... Мануэлла.",
+title:"PRONAĐEN MATCH",
+text:"Sistem je otkrio novog igrača... Manuela.",
 image:"her/photo1.jpg",
-button:"Проверить профиль"
+button:"Proveri profil"
 },
 {
-title:"Анализ профиля",
-text:"🎹 Любит пианино. 🎤 Любит петь. 🎮 Играет в CS2. Статус: подозрительно интересный игрок.",
+title:"Analiza profila",
+text:"🎹 Voli klavir. 🎤 Voli da peva. 🎮 Igra CS2. Status: sumnjivo zanimljiv igrač.",
 image:"her/photo2.jpg",
-button:"Продолжить анализ"
+button:"Nastavi analizu"
 },
 {
-title:"Совпадение найдено",
-text:"Система сравнила два профиля и обнаружила необычно много совпадений. Музыка, пианино, игры...",
+title:"Podudaranje pronađeno",
+text:"Sistem je uporedio dva profila i otkrio neočekivano mnogo podudaranja. Muzika, klavir, igre...",
 image:"me/me1.jpg",
-button:"Посмотреть детали"
+button:"Pogledaj detalje"
 },
 {
-title:"Демка матча",
-text:"Игрок демонстрирует высокий уровень обаяния, приятную улыбку и опасно красивые светлые волосы",
+title:"Demo meča",
+text:"Igrač pokazuje visok nivo šarma, prijatan osmeh i opasno lepu plavu kosu",
 image:"her/photo3.jpg",
-button:"Открыть статистику"
+button:"Otvori statistiku"
 },
 {
-title:"Статистика",
+title:"Statistika",
 stats:true,
-button:"Подтвердить результат"
+button:"Potvrdi rezultat"
 },
 {
-title:"Следующий матч",
-text:"🇧🇦 Среда, 20:00 (Босния). Может сыграем ещё одну катку вместе?",
+title:"Sledeći meč",
+text:"🇧🇦 Sreda, 20:00 (Bosna). Hoćemo li igrati još jednu partiju zajedno?",
 image:"her/photo4.jpg",
 buttons:true
 },
 {
 title:"MATCH ACCEPTED",
-text:"Лобби создано. Осталось дождаться начала следующей катки. Спасибо за то, что стала причиной моей улыбки ❤️",
+text:"Lobi je kreiran. Ostaje da se sačeka početak sledeće partije. Hvala što si razlog mog osmeha ❤️",
 image:"her/photo1.jpg",
 final:true
 }
@@ -82,32 +82,32 @@ function renderStats(){
 
         <div class="player">
             <img src="./me/me2.jpg" class="avatar">
-            <div>Абай</div>
+            <div>Abai</div>
         </div>
 
         <div class="player">
             <img src="./her/photo5.jpg" class="avatar">
-            <div>Мануэлла</div>
+            <div>Manuela</div>
         </div>
 
     </div>
 
     <table>
         <tr>
-            <th>Навык</th>
-            <th>Ты</th>
-            <th>Она</th>
+            <th>Veština</th>
+            <th>Ti</th>
+            <th>Ona</th>
         </tr>
 
         <tr>
-            <td>Музыка</td>
-            <td>100</td>
+            <td>Muzika</td>
+            <td>95</td>
             <td>100</td>
         </tr>
 
         <tr>
-            <td>Пианино</td>
-            <td>100</td>
+            <td>Klavir</td>
+            <td>70</td>
             <td>100</td>
         </tr>
 
@@ -118,14 +118,14 @@ function renderStats(){
         </tr>
 
         <tr>
-            <td>Юмор</td>
+            <td>Humor</td>
             <td>95</td>
-            <td>95</td>
+            <td>75</td>
         </tr>
     </table>
 
     <div class="compatibility">
-        Совместимость: 99.8%
+        Kompatibilnost: 91.9%
     </div>
 
  </div>
@@ -167,8 +167,8 @@ function render(){
     ${s.buttons
       ? `
         <div class="btnRow">
-          <button id="yesBtn">Да</button>
-          <button id="noBtn">Нет</button>
+          <button id="yesBtn">Da</button>
+          <button id="noBtn">Ne</button>
         </div>
       `
       : !s.final
@@ -203,7 +203,7 @@ function render(){
       };
 
       no.onclick = () => {
-        showToast("Эта кнопка не работает. Попробуйте нажать 'Да'");
+        showToast("Ovo dugme ne radi. Pritisni 'Da'");
       };
     }
  });
