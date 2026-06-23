@@ -34,7 +34,7 @@ button:"Подтвердить результат"
 {
 title:"Следующий матч",
 text:"🇧🇦 Среда, 20:00 (Bosnia). Сервер уже зарезервировал место в лобби.",
-image:"her/photo5.jpg",
+image:"her/photo4.jpg",
 button:"Перейти в лобби"
 },
 {
@@ -69,12 +69,12 @@ function renderStats(){
     <div class="players">
 
         <div class="player">
-            <img src="me/avatar.jpg" class="avatar">
+            <img src="me/me2.jpg" class="avatar">
             <div>Абай</div>
         </div>
 
         <div class="player">
-            <img src="her/avatar.jpg" class="avatar">
+            <img src="her/photo5.jpg" class="avatar">
             <div>Мануэлла</div>
         </div>
 
