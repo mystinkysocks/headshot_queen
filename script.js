@@ -95,7 +95,7 @@ function renderStats(){
     <table>
         <tr>
             <th>Veština</th>
-            <th>Ti</th>
+            <th>On</th>
             <th>Ona</th>
         </tr>
 
