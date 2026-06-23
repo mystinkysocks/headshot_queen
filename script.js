@@ -35,7 +35,7 @@ button:"Подтвердить результат"
 title:"Следующий матч",
 text:"🇧🇦 Среда, 20:00 (Босния). Может сыграем ещё одну катку вместе?",
 image:"her/photo4.jpg",
-button:"Да"
+buttons:true
 },
 {
 title:"MATCH ACCEPTED",
@@ -60,6 +60,18 @@ function typeText(el,text,callback){
    callback?.();
   }
  },20);
+}
+
+function showToast(text){
+ const toast = document.getElementById("toast");
+ toast.innerText = text;
+ toast.classList.add("show");
+
+ clearTimeout(window.toastTimer);
+
+ window.toastTimer = setTimeout(()=>{
+   toast.classList.remove("show");
+ },2500);
 }
 
 function renderStats(){
@@ -152,9 +164,16 @@ function render(){
 
     <div class="text" id="typed"></div>
 
-    ${!s.final
-      ? `<button id="nextBtn" style="display:none">${s.button}</button>`
-      : ""
+    ${s.buttons
+      ? `
+        <div class="btnRow">
+          <button id="yesBtn">Да</button>
+          <button id="noBtn">Нет</button>
+        </div>
+      `
+      : !s.final
+        ? `<button id="nextBtn" style="display:none">${s.button}</button>`
+        : ""
     }
  </div>
  `;
@@ -166,13 +185,26 @@ function render(){
     const btn=document.getElementById("nextBtn");
 
     if(btn){
-
         btn.style.display="block";
-
         btn.onclick=()=>{
             current++;
             render();
         };
+    }
+
+    if(s.buttons){
+
+      const yes = document.getElementById("yesBtn");
+      const no = document.getElementById("noBtn");
+
+      yes.onclick = () => {
+        current++;
+        render();
+      };
+
+      no.onclick = () => {
+        showToast("Эта кнопка не работает. Попробуйте нажать 'Да'");
+      };
     }
  });
 
